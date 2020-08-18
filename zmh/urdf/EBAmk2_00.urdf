@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mk2">
+
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent link="world"/>
+    <child link="base_link"/>
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="1" />
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0349815868608093 3.45195601212453E-06 0.0235962032476716"
+        rpy="0 0 0" />
+      <mass
+        value="0.0994478705571182" />
+      <inertia
+        ixx="8.78738122261951E-05"
+        ixy="3.72504351469179E-09"
+        ixz="-9.04628434837041E-06"
+        iyy="0.000227120361491651"
+        iyz="-3.50836759207426E-10"
+        izz="0.000268632717528072" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.00116183466010847 -0.000923292646146064 0.0204993310376243"
+        rpy="0 0 0" />
+      <mass
+        value="0.143800774705571" />
+      <inertia
+        ixx="9.78517995973981E-05"
+        ixy="2.76145534032057E-06"
+        ixz="-4.65441556575713E-06"
+        iyy="0.000103149724795545"
+        iyz="4.667687422664E-06"
+        izz="0.000114206001932188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 -0.051 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.7854"
+      upper="0.7854"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.00452931540875191 -0.00218873956418274 0.0580626465984603"
+        rpy="0 0 0" />
+      <mass
+        value="0.0718134009125203" />
+      <inertia
+        ixx="0.000155028184165305"
+        ixy="-3.27574749088659E-07"
+        ixz="1.16340292401804E-06"
+        iyy="0.000153346834667362"
+        iyz="8.25382674555585E-07"
+        izz="1.2243566135266E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.00475 0 0.043"
+      rpy="0 0.31128 -1.5708" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.8"
+      upper="0.35"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.037081320711932 -0.00178416319260027 0.0124408984823689"
+        rpy="0 0 0" />
+      <mass
+        value="0.0388737410647466" />
+      <inertia
+        ixx="5.53461367920462E-06"
+        ixy="4.42111573845459E-06"
+        ixz="6.20780709754226E-07"
+        iyy="0.00013900648727504"
+        iyz="4.70845831476123E-07"
+        izz="0.000138729814786303" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.01225 0.135"
+      rpy="0 0.38422 -3.1416" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.45"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-0.00904521324105867 0.016161708416657 0.0161562110474978"
+        rpy="0 0 0" />
+      <mass
+        value="0.0151686424476392" />
+      <inertia
+        ixx="4.23068158277324E-06"
+        ixy="-2.60938380303925E-07"
+        ixz="2.96419868226402E-07"
+        iyy="2.6555628669253E-06"
+        iyz="9.03977750880711E-07"
+        izz="2.55615306101055E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.18669 0.002 -0.0034048"
+      rpy="-0.078331 0 1.5708" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="claw_base">
+    <inertial>
+      <origin
+        xyz="0.00644953017850305 -0.00017902127468191 0.00761523104103851"
+        rpy="0 0 0" />
+      <mass
+        value="0.00812744275701585" />
+      <inertia
+        ixx="8.61994479025372E-07"
+        ixy="-2.11585838806158E-08"
+        ixz="4.31549931637107E-07"
+        iyy="2.25293774873985E-06"
+        iyz="1.65458294619221E-08"
+        izz="2.29927367017943E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw_base_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0087 -0.006 -0.00295"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="link_4" />
+    <child
+      link="claw_base" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="claw_l">
+    <inertial>
+      <origin
+        xyz="0.018795969030189 -0.00209029441611197 -0.00256048827274187"
+        rpy="0 0 0" />
+      <mass
+        value="0.00138436151350558" />
+      <inertia
+        ixx="2.16139574184186E-08"
+        ixy="1.517848128097E-08"
+        ixz="2.79262652439626E-08"
+        iyy="4.15144873931117E-07"
+        iyz="-3.53758311900147E-09"
+        izz="4.0210212013052E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_l.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_l.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw_l_joint"
+    type="revolute">
+    <origin
+      xyz="0.0085 0.00905 -0.0033"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="claw_base" />
+    <child
+      link="claw_l" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.65"
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="claw_r">
+    <inertial>
+      <origin
+        xyz="0.0184397787649197 -0.00093284347084055 -0.00253431616879777"
+        rpy="0 0 0" />
+      <mass
+        value="0.00143203670791784" />
+      <inertia
+        ixx="2.18331042102845E-08"
+        ixy="-1.6002566519607E-08"
+        ixz="2.86397375361884E-08"
+        iyy="4.26824046623585E-07"
+        iyz="3.65519116896282E-09"
+        izz="4.13780496158708E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_r.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zmh/meshes/claw_r.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="claw_r_joint"
+    type="revolute">
+    <origin
+      xyz="0.0085 -0.00905 -0.0003"
+      rpy="1.5708 0 0" />
+    <parent
+      link="claw_base" />
+    <child
+      link="claw_r" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.65"
+      effort="100"
+      velocity="1" />
+    <mimic
+      joint=""
+      multiplier="1"
+      offset="0" />
+  </joint>
+</robot>
